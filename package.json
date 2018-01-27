@@ -2,12 +2,15 @@
   "name": "vue-tetris",
   "version": "1.0.3",
   "description": "A Vue.js project",
-  "author": "binaryify <zhuangtongfa@qq.com>",
+  "author": "nianqin <bu__dong@163.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "pm2start": "pm2 start ./index.js -i 1 --name tetris --max-memory-restart 100M",
+    "pm2stop": "pm2 stop tetris",
+    "pm2restart": "pm2 restart tetris"
   },
   "dependencies": {
     "immutable": "^3.8.1",
@@ -53,7 +56,9 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.18.0",
-    "webpack-merge": "^4.1.0"
+    "webpack-merge": "^4.1.0",
+    "serve": "^6.4.1",
+    "pm2": "^2.4.0"
   },
   "engines": {
     "node": ">= 4.0.0",

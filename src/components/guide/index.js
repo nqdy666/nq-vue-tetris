@@ -13,8 +13,8 @@ export default {
     QRCode: () => i18n.QRCode[lan],
     QRTitle: () => i18n.QRNotice[lan],
     QRSrc: () =>
-      window.location.protocol +
-      '//binaryify.github.io/vue-tetris/static/qr.jpeg'
+      window.location.protocol + '//' + window.location.host +
+      '/static/qr.png'
   },
   mounted() {
     window.addEventListener('resize', this.resize.bind(this), true)
